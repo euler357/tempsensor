@@ -1,0 +1,3 @@
+# Rule for ubld Electronics, LLC Tempsensor
+SUBSYSTEM=="tty", ATTRS{product}=="USB Temperature Sensor", SYMLINK="tempsensor", RUN+="/bin/stty raw -echo -ixoff -F /dev/%k speed 3000000"
+ATTRS{idVendor}=="16d0", ATTRS{idProduct}=="0aa3", ENV{ID_MM_DEVICE_IGNORE}="1", MODE="0666"
