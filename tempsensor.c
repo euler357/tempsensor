@@ -327,7 +327,9 @@ int main(void)
 
 	usbd_device *usbd_handle;
 
-	rcc_clock_setup_in_hse_8mhz_out_72mhz();	// Use this for "blue pill"
+	//rcc_clock_setup_in_hse_8mhz_out_72mhz();	// Use this for "blue pill"  // DEPRECATED
+	rcc_clock_setup_pll(&rcc_hse_configs[RCC_CLOCK_HSE8_72MHZ]);
+
 	gpio_setup();
 
 	for (i = 0; i < 24000000; i++)	/* Wait a bit. */

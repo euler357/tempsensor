@@ -20,7 +20,7 @@ CFLAGS += -I$(LIBOPENPCMROOT)/include -c -DSTM32F1
  
 LDFLAGS = --static -nostartfiles -mthumb -mcpu=cortex-m3 -msoft-float -mfix-cortex-m3-ldrd -Wl,-Map=tempsensor.map 
 LDFLAGS += -Wl,--gc-sections -specs=nosys.specs -Wl,--start-group -lc -lgcc -lnosys -Wl,--end-group 
-LDFLAGS += -T./stm32f103c8t6.ld -L/home/euler357/stm32/libopencm3/lib 
+LDFLAGS += -T./stm32f103c8t6.ld -L/home/euler357/libopencm3/lib 
 
 
 default: $(TARGET).bin 
